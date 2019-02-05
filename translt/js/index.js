@@ -45,7 +45,7 @@ function TransMod(){
    expires: 8, // expires in one week
 });
 	InitStaticText(cookie.get('lang'));
-	alert (cookie.get('lang'));
+	
 	$("#en").click(function(){ 
 		InitStaticText("en");
 			cookie.empty().set('lang', 'en', {
