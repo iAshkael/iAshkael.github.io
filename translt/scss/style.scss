@@ -1,0 +1,81 @@
+$accent: #DA4177;
+
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Raleway", sans-serif;
+	background-color: $accent;
+	color: #fff;
+	font-size: 30px;
+	line-height: 50px;
+}
+
+.wrapper {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+h1 { font-size: 80px; }
+
+.menu { 
+	display: block;
+	text-align: right;
+	padding-right: 2em;
+	font-size: 20px;
+	line-height: 25px;
+	.menu_nav {
+		padding: 0;
+    list-style: none;
+	}
+	li,a {display: inline-block; }
+	a {text-decoration: none; color: #fff;}
+}
+
+.menu_nav{>li{position: relative;}}
+
+.language_select {
+	padding: 7px 15px;
+	border: 1px solid #fff;
+	margin-right: 10px;
+	>a:before {
+		content: '';
+		position: absolute;
+	}
+	&:hover,&:active,&:focus {
+		background: white;
+		border: none;
+		>a { color: black; }
+		>ul {
+			opacity: 1;
+			visibility: visible;
+			margin: 0;
+			padding: 10px;
+			background: white;
+			color: black;
+		}
+	}
+}
+.language_select_children { 
+	min-width: 100%;
+  position: absolute;
+  top: 100%; left: 0;
+  z-index: 1;   
+  opacity: 0;
+  visibility: hidden;   
+  transition: opacity .2s;
+	> li {
+		width: 100%;
+		text-align: center;
+		padding: 5px;
+		&:hover,&:active,&:focus {
+			cursor: pointer;
+			color: $accent;
+		}
+	}
+}
+
+.social {
+	padding: 10px;
+}
