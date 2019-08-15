@@ -153,7 +153,9 @@ function actionPage() {
     searchBtn.addEventListener('click', () => {
 
         const searchText = new RegExp(search.value.trim(), 'i');
-        cards.forEach((card) => {
+        filterPrice();
+        hotCheck();
+        currentCards().forEach((card) => {
             const title = card.querySelector('.card-title');
             if (!searchText.test(title.textContent)) {
                 card.parentNode.remove();
