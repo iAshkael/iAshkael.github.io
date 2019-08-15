@@ -165,8 +165,6 @@ function actionPage() {
 
             }
             search.value = "";
-            min.value = "";
-            max.value = "";
 
         });
 
